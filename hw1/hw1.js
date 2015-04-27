@@ -30,7 +30,7 @@
 
 	function copyFile() {
 		var now = new Date().toString(),
-			newFileName = fileName.split('.')[0] + '_' + now.split(' ').join('_') + '.' + fileName.split('.')[1];
+			newFileName = fileName.split('.')[0] + '_' + now + '.' + fileName.split('.')[1];
 
 		child_process.spawn('cp', [fileName, newFileName]);
 		console.log('File ' + fileName + ' copied to ' + newFileName);
